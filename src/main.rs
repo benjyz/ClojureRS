@@ -38,6 +38,8 @@ fn main() {
     // instantiate the core environment
     let repl = repl::Repl::default();
 
+    // println!("main");
+
     match cli_args {
         // eval the file/script
         user_action::Action::RunScript(script) => {

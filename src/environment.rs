@@ -297,6 +297,7 @@ impl Environment {
 
         // rust implementations of core functions
         let slurp_fn = rust_core::slurp::SlurpFn {};
+        let spit_fn = rust_core::spit::SpitFn {};
 
         // clojure.std functions
         let thread_sleep_fn = clojure_std::thread::SleepFn {};
@@ -405,6 +406,7 @@ impl Environment {
         // core.clj wraps calls to the rust implementations
         // @TODO add this to clojure.rs.core namespace as clojure.rs.core/slurp
         environment.insert(Symbol::intern("rust-slurp"), slurp_fn.to_rc_value());
+        environment.insert(Symbol::intern("rust-spit"), spit_fn.to_rc_value());
 
         // clojure.string
         environment.insert_into_namespace(

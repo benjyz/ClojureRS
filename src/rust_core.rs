@@ -99,6 +99,9 @@ pub use self::read_line::*;
 pub(crate) mod slurp;
 pub use self::slurp::*;
 
+pub(crate) mod spit;
+pub use self::spit::*;
+
 pub(crate) mod load_file;
 pub use self::load_file::*;
 

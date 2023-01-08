@@ -741,6 +741,7 @@ impl Evaluable for Rc<Value> {
                     let try_apply_ifn =
                         ifn.apply_to_persistent_list(&Rc::clone(&environment), tail);
 
+                    println!("whats wrong...");
                     // Right now we're using the normal error message, however maybe later we will try
                     //
                     // You tried to call value of type {} like a function, but only types of the
